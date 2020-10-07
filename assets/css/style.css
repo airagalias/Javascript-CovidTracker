@@ -1,0 +1,203 @@
+:root {
+    --color-dark: rgb(25, 25, 25);
+    --color-light: #fdfffc;
+    --color-red: #e71d36;
+    --color-mint: #2ec4b6;
+    --color-yellow: #ff9f1c;
+
+    --font-Quicksand: 'Quicksand', 'sans-serif';
+    --font-Roboto: 'Roboto', 'sans-serif';
+}
+
+* {
+    font-family: var(--font-Quicksand);
+}
+
+/* Page Background */
+.world-page,
+.page {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url(/assets/photos/covid-19-2.\ jpg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Header Logo Nav */
+header {
+    background-color: var(--color-dark);
+    color: var(--color-light);
+    line-height: 60px;
+    padding: 0 300px;
+}
+
+/* Country Selected */
+#countrySelector h1,
+#world-info h1 {
+    color: var(--color-light);
+    padding: 60px 0 20px;
+    font-weight: 800;
+    font-family: var(--font-Roboto);
+    letter-spacing: 5px;
+}
+
+#countrySelector p,
+#world-info p {
+    color: var(--color-light);
+    letter-spacing: 1.5px;
+    font-size: 12px;
+}
+
+/* Country Selector */
+.drop-btn {
+    color: rgb(70, 70, 70);
+    font-size: 25px;
+    height: 44px;
+    padding: 5px 12px;
+    background-color: var(--color-dark);
+    border: 1px solid var(--color-light);
+}
+
+/* Country Lists */
+#countryList {
+    top: 64%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    background-color: var(--color-dark);
+    width: 350px;
+    height: 350px;
+    z-index: 1;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    cursor: pointer;
+}
+
+#countryList ul li {
+    color: var(--color-light);
+    list-style: none;
+    margin: 5px 0;
+    padding: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#countryList ul li:hover {
+    border-left: 1px solid var(--color-mint);
+}
+
+/* County Input */
+#countrySelector input {
+    background-color: black;
+    width: 300px;
+    padding: 8px;
+    color: var(--color-light);
+}
+
+/* #countrySelector input:focus {
+	border: 1px solid --color-mint;
+} */
+
+/* Datas */
+.infos h2 {
+    color: var(--color-light);
+    font-size: 15px;
+    letter-spacing: 2px;
+}
+
+#confirmed p,
+#recovered p,
+#deaths p,
+#worldTotalConfirmed p,
+#worldTotalRecovered p,
+#worldTotalDeaths p {
+    font-family: var(--font-Roboto);
+    font-weight: bold;
+    font-size: 30px;
+    letter-spacing: 5px;
+}
+
+#confirmed p,
+#worldTotalConfirmed p {
+    color: var(--color-yellow);
+}
+
+#recovered p,
+#worldTotalRecovered p {
+    color: var(--color-mint);
+}
+
+#deaths p,
+#worldTotalDeaths p {
+    color: var(--color-red);
+}
+
+small {
+    color: var(--color-light);
+    letter-spacing: 2px;
+}
+
+#globalInfo {
+    color: var(--color-light);
+}
+
+#globalInfo h3,
+#globalInfo p {
+    margin: 0;
+}
+
+#world-page {}
+
+/* width */
+::-webkit-scrollbar {
+    width: 3px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+@media (max-width: 1200px) {
+    #countrySelector h1 {
+        padding: 15px;
+    }
+
+    header {
+        padding: 0 15px;
+    }
+
+    #countryList {
+        top: 400px;
+        position: absolute;
+        background-color: var(--color-dark);
+        width: 350px;
+        height: 350px;
+        z-index: 1;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+
+    #confirmed,
+    #recovered,
+    #deaths,
+    #worldTotalConfirmed,
+    #worldTotalRecovered,
+    #worldTotalDeaths {
+        margin: 0;
+        margin-bottom: 30px;
+        padding: 0;
+    }
+
+    #world-info h1 {
+        padding-top: 10px;
+    }
+}
